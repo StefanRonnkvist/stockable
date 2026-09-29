@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Stockable — Storage Locations Import Template
+  ===============================================
+  Import this file via Settings → DB Control → Import XML.
+
+  IMPORTANT: Importing will DELETE all existing storage_locations rows and
+  replace them with the rows defined here. Omitting a table element leaves
+  that table untouched.
+
+  Column reference for <storage_locations>
+  -----------------------------------------
+  id                  INTEGER  Auto-assigned on import (include unique values to preserve references)
+  location_code       TEXT     Unique human-readable code, e.g. "CAB-001"
+  batch_id            TEXT     UUID or identifier grouping locations created together
+  batch_index         INTEGER  0-based position within the batch
+  batch_size          INTEGER  Total number of locations in the batch
+  use_metric          INTEGER  1 = metric (cm/kg), 0 = imperial (in/lbs)
+  storage_type        TEXT     Cabinet | Floor | Rack
+  storage_environment TEXT     Indoor | Outdoor
+  storage_layout      TEXT     Bulk
+  compartment_type    TEXT     None | Drawer | Shelf | Both
+  drawers             INTEGER  Number of drawer units (0 if no drawers)
+  shelves             INTEGER  Number of shelf units (0 if no shelves)
+  drawer_rows         INTEGER  Rows per drawer unit (0 if no drawers)
+  drawer_columns      INTEGER  Columns per drawer unit (0 if no drawers)
+  shelf_rows          INTEGER  Rows per shelf unit (0 if no shelves)
+  shelf_columns       INTEGER  Columns per shelf unit (0 if no shelves)
+  min_length          INTEGER  Minimum item length accepted (in selected unit)
+  max_length          INTEGER  Maximum item length accepted
+  min_width           INTEGER  Minimum item width accepted
+  max_width           INTEGER  Maximum item width accepted
+  min_height          INTEGER  Minimum item height accepted
+  max_height          INTEGER  Maximum item height accepted
+  min_weight          INTEGER  Minimum item weight accepted
+  max_weight          INTEGER  Maximum item weight accepted
+  drawer_length       INTEGER  Internal drawer length (0 if not applicable)
+  drawer_width        INTEGER  Internal drawer width (0 if not applicable)
+  drawer_height       INTEGER  Internal drawer height (0 if not applicable)
+  drawer_max_weight   INTEGER  Maximum weight per drawer (0 if not applicable)
+  shelf_length        INTEGER  Internal shelf length (0 if not applicable)
+  shelf_width         INTEGER  Internal shelf width (0 if not applicable)
+  shelf_height        INTEGER  Internal shelf height (0 if not applicable)
+  shelf_max_weight    INTEGER  Maximum weight per shelf (0 if not applicable)
+  created_at          TEXT     ISO-8601 timestamp, e.g. "2026-05-04T10:00:00.000"
+  updated_at          TEXT     ISO-8601 timestamp, e.g. "2026-05-04T10:00:00.000"
+-->
+<stockable>
+
+  <storage_locations>
+
+    <!-- Example 1: Cabinet with drawers (metric) -->
+    <row
+      id="1"
+      location_code="CAB-001"
+      batch_id="batch-2026-001"
+      batch_index="0"
+      batch_size="2"
+      use_metric="1"
+      storage_type="Cabinet"
+      storage_environment="Indoor"
+      storage_layout="Bulk"
+      compartment_type="Drawer"
+      drawers="4"
+      shelves="0"
+      drawer_rows="2"
+      drawer_columns="3"
+      shelf_rows="0"
+      shelf_columns="0"
+      min_length="0"
+      max_length="30"
+      min_width="0"
+      max_width="20"
+      min_height="0"
+      max_height="10"
+      min_weight="0"
+      max_weight="5"
+      drawer_length="30"
+      drawer_width="20"
+      drawer_height="10"
+      drawer_max_weight="5"
+      shelf_length="0"
+      shelf_width="0"
+      shelf_height="0"
+      shelf_max_weight="0"
+      created_at="2026-05-04T10:00:00.000"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+    <!-- Example 2: Rack with shelves (metric) -->
+    <row
+      id="2"
+      location_code="RACK-001"
+      batch_id="batch-2026-001"
+      batch_index="1"
+      batch_size="2"
+      use_metric="1"
+      storage_type="Rack"
+      storage_environment="Indoor"
+      storage_layout="Bulk"
+      compartment_type="Shelf"
+      drawers="0"
+      shelves="5"
+      drawer_rows="0"
+      drawer_columns="0"
+      shelf_rows="1"
+      shelf_columns="4"
+      min_length="0"
+      max_length="100"
+      min_width="0"
+      max_width="50"
+      min_height="0"
+      max_height="40"
+      min_weight="0"
+      max_weight="25"
+      drawer_length="0"
+      drawer_width="0"
+      drawer_height="0"
+      drawer_max_weight="0"
+      shelf_length="100"
+      shelf_width="50"
+      shelf_height="40"
+      shelf_max_weight="25"
+      created_at="2026-05-04T10:00:00.000"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+    <!-- Example 3: Floor storage, no compartments (imperial) -->
+    <row
+      id="3"
+      location_code="FLR-001"
+      batch_id="batch-2026-002"
+      batch_index="0"
+      batch_size="1"
+      use_metric="0"
+      storage_type="Floor"
+      storage_environment="Outdoor"
+      storage_layout="Bulk"
+      compartment_type="None"
+      drawers="0"
+      shelves="0"
+      drawer_rows="0"
+      drawer_columns="0"
+      shelf_rows="0"
+      shelf_columns="0"
+      min_length="0"
+      max_length="48"
+      min_width="0"
+      max_width="48"
+      min_height="0"
+      max_height="60"
+      min_weight="0"
+      max_weight="500"
+      drawer_length="0"
+      drawer_width="0"
+      drawer_height="0"
+      drawer_max_weight="0"
+      shelf_length="0"
+      shelf_width="0"
+      shelf_height="0"
+      shelf_max_weight="0"
+      created_at="2026-05-04T10:00:00.000"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+  </storage_locations>
+
+</stockable>

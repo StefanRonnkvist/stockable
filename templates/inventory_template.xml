@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Stockable — Inventory Import Template
+  ========================================
+  Import this file via Settings → DB Control → Import XML.
+
+  IMPORTANT: Importing will DELETE all existing rows for each table element
+  present in this file and replace them with the rows defined here.
+  Tables not listed here are left untouched.
+
+  This template covers inventory data:
+    • location_slot_contents  — what is stored in each slot
+    • location_slot_merges    — which adjacent slots have been merged
+
+  ─────────────────────────────────────────
+  Column reference: <location_slot_contents>
+  ─────────────────────────────────────────
+  id               INTEGER  Auto-assigned; include unique values to preserve order
+  location_code    TEXT     Must match an existing storage_locations.location_code
+  slot_type        TEXT     Drawer | Shelf
+  container_label  TEXT     Label of the drawer/shelf unit, e.g. "Drawer 1"
+  slot_label       TEXT     Label of the individual slot, e.g. "A1"
+  contents         TEXT     Free-text description of what is stored here (may be empty)
+  updated_at       TEXT     ISO-8601 timestamp, e.g. "2026-05-04T10:00:00.000"
+
+  ─────────────────────────────────────────
+  Column reference: <location_slot_merges>
+  ─────────────────────────────────────────
+  id                 INTEGER  Auto-assigned
+  location_code      TEXT     Must match an existing storage_locations.location_code
+  slot_type          TEXT     Drawer | Shelf
+  container_label    TEXT     Label of the drawer/shelf unit containing both slots
+  first_slot_label   TEXT     Label of the first slot in the merged pair
+  second_slot_label  TEXT     Label of the second slot in the merged pair
+  updated_at         TEXT     ISO-8601 timestamp
+-->
+<stockable>
+
+  <location_slot_contents>
+
+    <!-- Example 1: Drawer slot with contents -->
+    <row
+      id="1"
+      location_code="CAB-001"
+      slot_type="Drawer"
+      container_label="Drawer 1"
+      slot_label="A1"
+      contents="M3 hex bolts x50"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+    <!-- Example 2: Drawer slot, empty -->
+    <row
+      id="2"
+      location_code="CAB-001"
+      slot_type="Drawer"
+      container_label="Drawer 1"
+      slot_label="A2"
+      contents=""
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+    <!-- Example 3: Shelf slot with contents -->
+    <row
+      id="3"
+      location_code="RACK-001"
+      slot_type="Shelf"
+      container_label="Shelf 1"
+      slot_label="A1"
+      contents="Power drill (Bosch GSB 18V)"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+    <!-- Example 4: Merged shelf slot (first of the pair) — pair defined in location_slot_merges -->
+    <row
+      id="4"
+      location_code="RACK-001"
+      slot_type="Shelf"
+      container_label="Shelf 2"
+      slot_label="B1"
+      contents="Large motor assembly"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+  </location_slot_contents>
+
+  <location_slot_merges>
+
+    <!-- Example: Slots B1 and B2 on Shelf 2 of RACK-001 are merged into one -->
+    <row
+      id="1"
+      location_code="RACK-001"
+      slot_type="Shelf"
+      container_label="Shelf 2"
+      first_slot_label="B1"
+      second_slot_label="B2"
+      updated_at="2026-05-04T10:00:00.000"
+    />
+
+  </location_slot_merges>
+
+</stockable>

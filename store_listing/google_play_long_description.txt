@@ -1,0 +1,38 @@
+Stockable turns cabinets, racks, floor areas, drawers, and shelves into a clear digital storage map.
+
+Create a storage location, describe its physical layout, and label the individual slots so you can record what belongs where. Stockable keeps its working data locally on your device and includes practical tools for maintaining and exporting that data.
+
+LOCATION SETUP
+- Create cabinet, rack, and floor locations.
+- Generate quick names and unique identifiers automatically.
+- Choose indoor or outdoor use.
+- Record dimensions and weight limits in metric or imperial units.
+- Configure drawers and shelves where the storage type supports them.
+- Create a numbered batch of locations with the same layout.
+
+SLOT MAPPING
+- View saved locations as drawer and shelf layouts.
+- Long-press a slot to add or edit its contents.
+- Merge and unmerge adjacent slots to match larger physical compartments.
+- Review the decoded details behind each location identifier.
+
+LOCATION MANAGEMENT
+- Review and refresh saved location records.
+- Edit location dimensions, limits, and layout details.
+- Delete records you no longer need.
+
+DATA TOOLS
+- Run local database integrity checks and diagnostics.
+- Optimize the database and rebuild indexes.
+- Export data as JSON or XML and import supported XML data.
+- Generate XML and CSV templates for location and inventory data.
+
+BUILT-IN HELP
+- The Help tab opens automatically on first run, so you are never dropped in blind.
+- Short guidance for every tab, from creating a location to assigning slot contents.
+- Tips for merging slots, bulk-creating identical locations, and exporting data before maintenance.
+
+Stockable also includes system, light, and dark themes, metric and imperial units, and an Information area for contacting support and reviewing your submissions.
+
+CURRENT RELEASE NOTES
+The Add Spare Part form is a preview and does not save inventory items yet. Reports and analytics are not available in this release. Web and PWA builds have no persistent database, so data lasts only for the browser session. The interface is currently in English, and Contact and Submissions require a network connection.
