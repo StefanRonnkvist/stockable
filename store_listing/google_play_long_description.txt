@@ -1,38 +1,37 @@
-Stockable turns cabinets, racks, floor areas, drawers, and shelves into a clear digital storage map.
+Stockable helps you map cabinets, racks, and floor storage so you can keep track of what belongs where. Set up a location, define its physical layout, and label drawer or shelf slots with their contents.
 
-Create a storage location, describe its physical layout, and label the individual slots so you can record what belongs where. Stockable keeps its working data locally on your device and includes practical tools for maintaining and exporting that data.
+On supported mobile and desktop builds, your working data is stored locally on your device. Stockable also includes tools to inspect, maintain, and export your data.
 
 LOCATION SETUP
-- Create cabinet, rack, and floor locations.
-- Generate quick names and unique identifiers automatically.
-- Choose indoor or outdoor use.
-- Record dimensions and weight limits in metric or imperial units.
-- Configure drawers and shelves where the storage type supports them.
-- Create a numbered batch of locations with the same layout.
+- Create cabinet, rack, and floor locations with automatic quick names and unique identifiers.
+- Choose indoor or outdoor use and record dimensions and weight limits.
+- Select metric or imperial units.
+- Configure drawers, shelves, or both where supported by the location type.
+- Create a numbered batch of locations that share one layout.
 
 SLOT MAPPING
 - View saved locations as drawer and shelf layouts.
-- Long-press a slot to add or edit its contents.
-- Merge and unmerge adjacent slots to match larger physical compartments.
-- Review the decoded details behind each location identifier.
+- Long-press a slot to add or edit its text contents.
+- Select adjacent slots in the same drawer or shelf to merge or unmerge them.
+- Review the layout and details encoded in a location identifier.
 
 LOCATION MANAGEMENT
-- Review and refresh saved location records.
-- Edit location dimensions, limits, and layout details.
-- Delete records you no longer need.
+- Review saved locations and pull down to refresh the list.
+- Edit dimensions, weight limits, and layout details.
+- Delete location records you no longer need.
 
 DATA TOOLS
-- Run local database integrity checks and diagnostics.
-- Optimize the database and rebuild indexes.
-- Export data as JSON or XML and import supported XML data.
-- Generate XML and CSV templates for location and inventory data.
+- Run database integrity checks and diagnostics, optimize the database, and rebuild indexes.
+- Export a database backup as JSON or import data from XML.
+- Export locations, slot contents, and merged-slot details together as XML.
+- Save XML templates and header-only CSV templates for locations and inventory.
 
 BUILT-IN HELP
-- The Help tab opens automatically on first run, so you are never dropped in blind.
-- Short guidance for every tab, from creating a location to assigning slot contents.
-- Tips for merging slots, bulk-creating identical locations, and exporting data before maintenance.
+- Help opens automatically when no saved locations are found and on web builds.
+- Find practical steps for creating locations, assigning slot contents, and using data tools.
+- Review current feature limitations before relying on a workflow.
 
-Stockable also includes system, light, and dark themes, metric and imperial units, and an Information area for contacting support and reviewing your submissions.
+Choose system, light, or dark appearance and metric or imperial units. The Information area includes an online contact form and submissions view.
 
 CURRENT RELEASE NOTES
-The Add Spare Part form is a preview and does not save inventory items yet. Reports and analytics are not available in this release. Web and PWA builds have no persistent database, so data lasts only for the browser session. The interface is currently in English, and Contact and Submissions require a network connection.
+The Add Spare Part form is a preview and does not save spare-part records. Inventory currently lists and manages storage locations. Reports is a placeholder; no reports or analytics are generated. Web and PWA builds do not have a persistent database, so browser data lasts only for the current session. The interface is currently in English. Contact and Submissions require an internet connection.

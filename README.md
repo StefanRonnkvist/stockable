@@ -1,47 +1,45 @@
 # Stockable
 
-Stockable is a Flutter application for mapping physical storage locations into a digital layout. It is designed around cabinets, racks, floor areas, drawers, shelves, and their individual slots.
+Stockable is a Flutter application for mapping physical storage locations into a digital layout. Create cabinets, racks, or floor areas, define supported drawers and shelves, and record text descriptions of what is stored in each slot. On supported native platforms, working data is stored locally in SQLite.
 
 ## Features
 
-- Create cabinet, rack, and floor storage locations.
-- Generate readable quick names and unique location identifiers.
-- Configure indoor or outdoor locations, dimensions, weight limits, drawers, and shelves.
-- Create multiple similarly configured locations as a numbered batch.
-- View a location as a drawer or shelf layout.
-- Add and edit text stored against individual slots.
-- Merge and unmerge adjacent slots to match physical compartments.
-- Review, edit, refresh, and delete saved location records.
-- Switch between metric and imperial units and system, light, or dark themes.
-- Run SQLite integrity checks, diagnostics, optimization, and index rebuilding.
-- Export database data as JSON or XML and import supported XML data.
-- Generate XML and CSV templates for location and inventory data.
-- Contact support and review Stockable submissions from the Information tab.
-- Read a built-in Help tab with per-tab guidance, first-run onboarding, and current limitations.
+- Create cabinet, rack, and floor locations with generated quick names and unique identifiers.
+- Configure indoor or outdoor use, dimensions, weight limits, and supported drawer or shelf layouts.
+- Create numbered batches of locations that share the same configuration.
+- View drawer and shelf layouts, and add or edit text contents on individual slots.
+- Merge or unmerge adjacent slots within the same drawer or shelf.
+- Review, edit, refresh, and delete saved storage-location records.
+- Choose metric or imperial units and system, light, or dark appearance.
+- Run SQLite integrity checks and diagnostics, optimize the database, and rebuild indexes.
+- Export the database as JSON, import XML, or export locations, slot contents, and merges together as XML.
+- Save XML and header-only CSV templates for location and inventory data.
+- Use online Contact and Submissions features from the Information tab.
+- Read built-in workflow guidance and current limitations in the Help tab.
 
 ## Getting Started
 
 1. Open **Add Storage Location** and choose a cabinet, floor area, or rack.
-2. Configure its environment, size, weight limits, and compartment layout.
-3. Create the location, then open **Location Assignment**.
-4. Select the location and long-press a slot to name its contents.
-5. Select two adjacent slots and use **Merge** or **Unmerge** when the physical compartment spans more than one slot.
-6. Use **Inventory** to review and maintain the saved location records.
-7. Use **Settings** to export data before destructive maintenance or major changes.
+2. Set indoor or outdoor use, dimensions, weight limits, and any supported drawer or shelf layout. You can create a numbered batch with the same layout.
+3. Open **Location Assignment**, choose the saved location, and review its details.
+4. Long-press a drawer or shelf slot to add or edit its text contents.
+5. Tap two adjacent slots in the same drawer or shelf, then choose **Merge** or **Unmerge** to reflect the physical compartments.
+6. Use **Inventory** to review, edit, or delete location records. The spare-part form is not functional yet.
+7. Use **Settings** to select units and appearance, and export data before importing or clearing anything.
 
-Help opens automatically when the app cannot find any saved locations, on the first run, and on web builds. It also lists the current release limitations.
+Help opens automatically when no saved locations are found and on web builds. It describes the workflow and current limitations.
 
 ## Current Limitations
 
-- The **Add Spare Part** fields in Inventory are a UI preview and do not save inventory items yet.
+- The **Add Spare Part** form in Inventory is a preview and does not save spare-part records. Inventory currently manages storage-location records.
 - **Reports** is a placeholder; this release does not generate reports or analytics.
-- Web/PWA builds do not provide persistent local database features. The app displays a warning and data is temporary for the browser session.
+- Web/PWA builds do not have a persistent database. The app displays a warning, and data lasts only for the current browser session.
 - The interface is currently available in English.
-- Contact and submission features require network access.
+- Contact and Submissions require an internet connection.
 
 ## Data and Platforms
 
-On Android, iOS, Windows, macOS, and Linux, Stockable stores its working data in a local SQLite database. Database controls and file import/export are available only on supported non-web builds. The app does not advertise cloud synchronization; export important data before clearing locations or replacing an installation.
+On native Android, iOS, Windows, macOS, and Linux builds, Stockable stores its working data in a local SQLite database. Database controls and file import/export are available on non-web builds. The app does not provide cloud synchronization; keep your own exports before clearing data or replacing an installation. Web/PWA data is temporary and limited to the current browser session.
 
 The project includes Flutter targets for Android, iOS, Windows, macOS, Linux, and web. Platform availability still depends on the Flutter toolchain and plugins installed on the build host.
 

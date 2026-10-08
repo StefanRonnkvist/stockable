@@ -129,12 +129,13 @@ class AppStringsEN extends AppStrings {
   String get gettingStartedTitle => 'Getting Started';
   @override
   String get gettingStartedDescription =>
-      'Create your first cabinet, floor area, or rack in Add Storage Location. '
-      'Open Location Assignment to select the location, long-press a slot to '
-      'name its contents, or select two adjacent slots to merge them. '
-      'Use Inventory to review, edit, or delete location records. '
-      'Use Settings to choose units, maintain the local database, and export '
-      'your data.';
+      'Create a cabinet, floor area, or rack in Add Storage Location. '
+      'Choose its environment, dimensions, weight limits, and supported '
+      'drawers or shelves; you can create a numbered batch with one layout. '
+      'In Location Assignment, choose the location and long-press a drawer or '
+      'shelf slot to add or edit its contents. Tap two adjacent slots in the '
+      'same container to merge or unmerge them. Inventory manages location '
+      'records; Settings contains preferences and data tools.';
   @override
   String get setupTabsTitle => 'Setup Tabs';
   @override
@@ -145,10 +146,10 @@ class AppStringsEN extends AppStrings {
   String get helpLocationAssignmentTitle => 'Location Assignment';
   @override
   String get helpLocationAssignmentDescription =>
-      'Choose a saved location and review its decoded layout and dimensions. '
-      'Long-press a drawer or shelf slot to add or edit its contents. '
-      'Tap two adjacent slots, then use Merge or Unmerge to match the physical '
-      'compartment layout.';
+      'Choose a saved location to view its identifier, layout, and dimensions. '
+      'Long-press a drawer or shelf slot to add or edit its text contents. '
+      'Tap two adjacent slots in the same drawer or shelf to select them, then '
+      'choose Merge or Unmerge. Pull down to refresh the location list.';
   @override
   String get helpAddStorageLocationTitle => 'Add Storage Location';
   @override
@@ -161,10 +162,9 @@ class AppStringsEN extends AppStrings {
   String get helpInventoryTitle => 'Inventory';
   @override
   String get helpInventoryDescription =>
-      'Review saved storage locations and pull down to refresh the list. '
-      'Use the edit and delete actions to maintain location records. '
-      'The Add Spare Part fields are a preview in this release and do not yet '
-      'save inventory items.';
+      'Review saved storage locations, pull down to refresh, and use each '
+      'record’s edit or delete actions to maintain it. The Add Spare Part form '
+      'is only a preview: it does not save spare-part records in this release.';
   @override
   String get helpReportsTitle => 'Reports';
   @override
@@ -176,10 +176,12 @@ class AppStringsEN extends AppStrings {
   @override
   String get helpSettingsDescription =>
       'Choose system, light, or dark appearance and metric or imperial units. '
-      'On supported desktop and mobile builds, DB Control can inspect and '
-      'maintain the local database, clear location data, export JSON, import '
-      'XML, export locations with inventory to XML, and save XML or CSV '
-      'templates. Export before clearing or replacing important data.';
+      'On non-web builds, DB Control can show the database path, run integrity '
+      'checks and diagnostics, optimize the database, rebuild indexes, and '
+      'clear location data. Export the database as JSON, import an XML backup, '
+      'or export locations, slot contents, and merges together as XML. You can '
+      'also save XML and header-only CSV templates. Import replaces existing '
+      'data, so keep an export before making destructive changes.';
   @override
   String get helpInformationTitle => 'Information';
   @override
@@ -198,11 +200,11 @@ class AppStringsEN extends AppStrings {
   String get limitationsTitle => 'Current Limitations';
   @override
   String get limitationsDescription =>
-      'The Add Spare Part fields in Inventory are a preview and do not save '
-      'items yet. Reports is a placeholder and generates no output. Web and '
-      'PWA builds have no persistent database, so data lasts only for the '
-      'browser session. The interface is currently available in English. '
-      'Contact and Submissions require a network connection.';
+      'Spare-part fields are a preview and do not save inventory items. '
+      'Reports is a placeholder and produces no reports or analytics. Web and '
+      'PWA builds do not have a persistent database; their data lasts only for '
+      'the current browser session. The interface is currently in English. '
+      'Contact and Submissions need an internet connection.';
   @override
   String get noticeTitle => 'Notice';
 
