@@ -1,1 +1,1 @@
-Map cabinets, racks, and floor storage; label slots and manage location data offline.
+Map storage locations, label drawer and shelf slots, and manage your data offline.

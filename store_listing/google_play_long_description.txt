@@ -1,6 +1,6 @@
 Stockable helps you map cabinets, racks, and floor storage so you can keep track of what belongs where. Set up a location, define its physical layout, and label drawer or shelf slots with their contents.
 
-On supported mobile and desktop builds, your working data is stored locally on your device. Stockable also includes tools to inspect, maintain, and export your data.
+On supported mobile and desktop builds, your working data is stored locally on your device. Stockable includes tools to inspect, maintain, and export your data. There is no cloud synchronization.
 
 LOCATION SETUP
 - Create cabinet, rack, and floor locations with automatic quick names and unique identifiers.
@@ -27,11 +27,11 @@ DATA TOOLS
 - Save XML templates and header-only CSV templates for locations and inventory.
 
 BUILT-IN HELP
-- Help opens automatically when no saved locations are found and on web builds.
+- Help opens automatically on first run, when the local database cannot be inspected, and on web builds.
 - Find practical steps for creating locations, assigning slot contents, and using data tools.
 - Review current feature limitations before relying on a workflow.
 
 Choose system, light, or dark appearance and metric or imperial units. The Information area includes an online contact form and submissions view.
 
 CURRENT RELEASE NOTES
-The Add Spare Part form is a preview and does not save spare-part records. Inventory currently lists and manages storage locations. Reports is a placeholder; no reports or analytics are generated. Web and PWA builds do not have a persistent database, so browser data lasts only for the current session. The interface is currently in English. Contact and Submissions require an internet connection.
+The Add Spare Part form is a preview and does not save spare-part records; Inventory currently manages storage-location records. Reports does not generate reports or analytics. Web/PWA builds do not provide a persistent database or database/file tools, so browser data lasts only for the current session. The interface is currently available in English. Contact and Submissions require an internet connection.

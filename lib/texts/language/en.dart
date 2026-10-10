@@ -129,13 +129,16 @@ class AppStringsEN extends AppStrings {
   String get gettingStartedTitle => 'Getting Started';
   @override
   String get gettingStartedDescription =>
-      'Create a cabinet, floor area, or rack in Add Storage Location. '
-      'Choose its environment, dimensions, weight limits, and supported '
-      'drawers or shelves; you can create a numbered batch with one layout. '
-      'In Location Assignment, choose the location and long-press a drawer or '
-      'shelf slot to add or edit its contents. Tap two adjacent slots in the '
-      'same container to merge or unmerge them. Inventory manages location '
-      'records; Settings contains preferences and data tools.';
+      '1. In Add Storage Location, create a cabinet, floor area, or rack. Choose '
+      'its environment, dimensions, weight limits, and supported drawers or '
+      'shelves; Create Multiple Locations makes a numbered batch with one layout. '
+      '2. In Location Assignment, choose the saved location. Long-press a drawer '
+      'or shelf slot to add or edit its text contents. Tap two adjacent slots in '
+      'the same drawer or shelf, then choose Merge or Unmerge. Pull down to '
+      'refresh the location list. 3. Use Inventory to review, edit, or delete '
+      'storage-location records. 4. Use Settings to choose units and appearance, '
+      'and to access data tools on non-web builds. Export data before importing '
+      'or clearing it.';
   @override
   String get setupTabsTitle => 'Setup Tabs';
   @override
@@ -181,7 +184,8 @@ class AppStringsEN extends AppStrings {
       'clear location data. Export the database as JSON, import an XML backup, '
       'or export locations, slot contents, and merges together as XML. You can '
       'also save XML and header-only CSV templates. Import replaces existing '
-      'data, so keep an export before making destructive changes.';
+      'data, and clearing deletes location records, so export a backup first. '
+      'Web/PWA builds do not provide these persistent database and file tools.';
   @override
   String get helpInformationTitle => 'Information';
   @override
@@ -200,11 +204,12 @@ class AppStringsEN extends AppStrings {
   String get limitationsTitle => 'Current Limitations';
   @override
   String get limitationsDescription =>
-      'Spare-part fields are a preview and do not save inventory items. '
-      'Reports is a placeholder and produces no reports or analytics. Web and '
-      'PWA builds do not have a persistent database; their data lasts only for '
-      'the current browser session. The interface is currently in English. '
-      'Contact and Submissions need an internet connection.';
+      'The Add Spare Part form is a preview and does not save spare-part records; '
+      'Inventory currently manages storage-location records. Reports does not '
+      'generate reports or analytics. Web/PWA builds have no persistent database '
+      'or database/file tools, so data lasts only for the current browser session. '
+      'The interface is currently available in English. Contact and Submissions '
+      'require an internet connection.';
   @override
   String get noticeTitle => 'Notice';
 
